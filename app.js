@@ -99,11 +99,11 @@ document.getElementById("playerForm").addEventListener("submit", function (event
     } else if (divisionsPlayed.length === 0) {
         eligibilityStatus = "Please select the divisions you played in the past two seasons above.";
     } else if ((divisionsPlayed.includes("D1") && (D1Games === 0 || D1TSP === 0))) {
-        eligibilityStatust = "Please enter stats for D1 above.";
+        eligibilityStatus = "Please enter stats for D1 above.";
     } else if ((divisionsPlayed.includes("D2") && (D2Games === 0 || D2TSP === 0))) {
-        eligibilityStatust = "Please enter stats for D2 above.";
+        eligibilityStatus = "Please enter stats for D2 above.";
     } else if ((divisionsPlayed.includes("D3") && (D3Games === 0 || D3TSP === 0))) {
-        eligibilityStatust = "Please enter stats for D3 above.";
+        eligibilityStatus = "Please enter stats for D3 above.";
     } 
 
     // Show the eligibility result in the result div
