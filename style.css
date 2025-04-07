@@ -11,7 +11,7 @@ label {
 button {
   font-size: 1.2em;
   padding: 10px;
-  display: inline-block; /* Ensures the button stays inline with the result */
+/*   display: inline-block; /* Ensures the button stays inline with the result */ */
 }
 
 #result {
@@ -19,6 +19,7 @@ button {
   background-color: #f0f0f0;
   border-radius: 5px;
   border: 1px solid #ccc;
+  display: none;
 }
 
 input, select {
