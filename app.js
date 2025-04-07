@@ -257,10 +257,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
-document.querySelector("playerForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // Prevent form submission
+// document.querySelector("playerForm").addEventListener("submit", function(e) {
+//   e.preventDefault(); // Prevent form submission
 
-  // Simulating the result (this part depends on your actual result generation logic)
-  document.getElementById("result").innerText = "Calculated Result Goes Here!";
-  document.getElementById("result").style.display = "inline-block"; // Show the result box
-});
+//   // Simulating the result (this part depends on your actual result generation logic)
+//   document.getElementById("result").innerText = "Calculated Result Goes Here!";
+//   document.getElementById("result").style.display = "inline-block"; // Show the result box
+// });
