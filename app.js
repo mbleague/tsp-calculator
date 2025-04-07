@@ -30,12 +30,6 @@ document.getElementById("playerForm").addEventListener("submit", function (event
     const D3Games = divisionsPlayed.includes("D3") ? parseInt(document.getElementById("D3Games").value) || 0 : 0;
     const D3TSP = divisionsPlayed.includes("D3") ? parseInt(document.getElementById("D3TSP").value) || 0 : 0;
 
-    console.log(D1Games);
-    console.log(D1TSP);
-
-    console.log(D2Games);
-    console.log(D2TSP);
-
     // Eligibility Check
     let resultText = "";
     let totalGames = 0;
@@ -98,6 +92,16 @@ document.getElementById("playerForm").addEventListener("submit", function (event
         } else {
             eligibilityStatus = "Eligible and not a point in D3.";
         }
+    }
+
+    if (divisionPlanned !== "D3" && divisionPlanned !== "D2" && divisionPlanned !== "D1") {
+        eligibilityStatus = "Please select the division you plan on playing above";
+    } else if (divisionsPlayed.length === 0) {
+        eligibilityStatus = "Please select the divisions you played in the past two seasons above";
+    } else if (D3TSP === 0 || D2TSP === 0 || D1TSP === 0) {
+        eligibilityStatus = "Please enter the number of TSP above"
+    } else if (D3Games === 0 || D2Games === 0 || D1Games === 0) {
+        eligibilityStatus = "Please enter the number of games above"
     }
 
     // Show the eligibility result in the result div
