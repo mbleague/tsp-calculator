@@ -27,10 +27,10 @@ input, select {
   margin: 5px 0 10px;
 }
 
-button {
+/* button {
   font-size: 1.2em;
   padding: 10px;
-}
+} */
 
 .player {
     border: 1px solid #ccc;
