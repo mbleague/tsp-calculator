@@ -68,9 +68,9 @@ document.getElementById("playerForm").addEventListener("submit", function (event
             eligibilityStatus = "Not eligible for D2.";
         } else if ((Math.round((D2TSP / D2Games) * 10) / 10) >= 30.0) {
             eligibilityStatus = "Not eligible for D2.";
-        } else if (parseFloat((D1TSP / D1Games).toFixed(1)) >= 11.5) {
+        } else if ((Math.round((D1TSP / D1Games) * 10) / 10) >= 11.5) {
             eligibilityStatus = "You are 1 point in D2.";
-        } else if (parseFloat((D2TSP / D2Games).toFixed(1)) >= 16.5) {
+        } else if ((Math.round((D2TSP / D2Games) * 10) / 10) >= 16.5) {
             eligibilityStatus = "You are 1 point in D2.";
         } else {
             eligibilityStatus = "Eligible and not a point in D2.";
@@ -79,15 +79,15 @@ document.getElementById("playerForm").addEventListener("submit", function (event
 
     if (divisionPlanned === "D3") {
         // D3 Eligibility Check
-        if (parseFloat((D2TSP / D2Games).toFixed(1)) >= 12) {
+        if ((Math.round((D2TSP / D2Games) * 10) / 10) >= 12) {
             eligibilityStatus = "Not eligible for D3.";
-        } else if (parseFloat((D3TSP / D3Games).toFixed(1)) >= 20.0) {
+        } else if ((Math.round((D3TSP / D3Games) * 10) / 10) >= 20.0) {
             eligibilityStatus = "Not eligible for D3.";
-        } else if (parseFloat((D1TSP / D1Games).toFixed(1)) > 4) {
+        } else if ((Math.round((D1TSP / D1Games) * 10) / 10) > 4) {
             eligibilityStatus = "Not eligible for D3. Past D1 players who averaged more than 4 TSP may be allowed on a case-by-case basis.";
-        } else if (parseFloat((D3TSP / D3Games).toFixed(1)) >= 15.0) {
+        } else if ((Math.round((D3TSP / D3Games) * 10) / 10) >= 15.0) {
             eligibilityStatus = "You are 1 point in D3.";
-        } else if (parseFloat((D2TSP / D2Games).toFixed(1)) >= 8) {
+        } else if ((Math.round((D2TSP / D2Games) * 10) / 10) >= 8) {
             eligibilityStatus = "You are 1 point in D3.";
         } else {
             eligibilityStatus = "Eligible and not a point in D3.";
