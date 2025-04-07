@@ -30,6 +30,12 @@ document.getElementById("playerForm").addEventListener("submit", function (event
     const D3Games = divisionsPlayed.includes("D3") ? parseInt(document.getElementById("D3Games").value) || 0 : 0;
     const D3TSP = divisionsPlayed.includes("D3") ? parseInt(document.getElementById("D3TSP").value) || 0 : 0;
 
+    console.log(D1Games);
+    console.log(D1TSP);
+
+    console.log(D2Games);
+    console.log(D2TSP);
+
     // Eligibility Check
     let resultText = "";
     let totalGames = 0;
