@@ -45,13 +45,15 @@ document.getElementById("playerForm").addEventListener("submit", function (event
     if (D2Games > 0) {
         totalGames += D2Games;
         totalTSP += D2TSP;
-        resultText += `D2: ${(D2TSP / D2Games).toFixed(1)} TSP\n`;
+        // resultText += `D2: ${(D2TSP / D2Games).toFixed(1)} TSP\n`;
+        resultText += `D2: ${Math.round((D2TSP / D2Games) * 10) / 10} TSP\n`;
     }
 
     if (D3Games > 0) {
         totalGames += D3Games;
         totalTSP += D3TSP;
-        resultText += `D3: ${(D3TSP / D3Games).toFixed(1)} TSP\n`;
+        // resultText += `D3: ${(D3TSP / D3Games).toFixed(1)} TSP\n`;
+        resultText += `D3: ${Math.round((D3TSP / D3Games) * 10) / 10} TSP\n`;
     }
 
     // Check for eligibility based on the division they want to play
@@ -62,9 +64,9 @@ document.getElementById("playerForm").addEventListener("submit", function (event
 
     if (divisionPlanned === "D2") {
         // D2 Eligibility Check
-        if (parseFloat((D1TSP / D1Games).toFixed(1)) >= 16.5) {
+        if ((Math.round((D1TSP / D1Games) * 10) / 10) >= 16.5) {
             eligibilityStatus = "Not eligible for D2.";
-        } else if (parseFloat((D2TSP / D2Games).toFixed(1)) >= 30.0) {
+        } else if ((Math.round((D2TSP / D2Games) * 10) / 10) >= 30.0) {
             eligibilityStatus = "Not eligible for D2.";
         } else if (parseFloat((D1TSP / D1Games).toFixed(1)) >= 11.5) {
             eligibilityStatus = "You are 1 point in D2.";
