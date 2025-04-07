@@ -99,11 +99,6 @@ document.getElementById("playerForm").addEventListener("submit", function (event
     document.getElementById("result").innerText = resultText;
 });
 
-document.querySelector("button[type='submit']").addEventListener("click", function(e) {
-  e.preventDefault(); // Prevent form submission
-  document.getElementById("result").style.display = "inline-block"; // Show the result box
-});
-
 // Show/hide TSP and Games fields based on the player's selected divisions
 document.querySelectorAll('input[name="divisionsPlayed"]').forEach(checkbox => {
     checkbox.addEventListener('change', function () {
@@ -260,4 +255,9 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Error loading player data:', error);
             resultsDiv.innerHTML = "<p>Failed to load player data. Please try again later.</p>";
         });
+});
+
+document.querySelector("button[type='submit']").addEventListener("click", function(e) {
+  e.preventDefault(); // Prevent form submission
+  document.getElementById("result").style.display = "inline-block"; // Show the result box
 });
