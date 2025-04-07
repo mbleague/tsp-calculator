@@ -256,3 +256,11 @@ document.addEventListener("DOMContentLoaded", function () {
             resultsDiv.innerHTML = "<p>Failed to load player data. Please try again later.</p>";
         });
 });
+
+document.querySelector("playerForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent form submission
+
+  // Simulating the result (this part depends on your actual result generation logic)
+  document.getElementById("result").innerText = "Calculated Result Goes Here!";
+  document.getElementById("result").style.display = "inline-block"; // Show the result box
+});
