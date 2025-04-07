@@ -62,13 +62,13 @@ document.getElementById("playerForm").addEventListener("submit", function (event
 
     if (divisionPlanned === "D2") {
         // D2 Eligibility Check
-        if (D1TSP / D1Games >= 16.5) {
+        if (parseFloat((D1TSP / D1Games).toFixed(1)) >= 16.5) {
             eligibilityStatus = "Not eligible for D2.";
-        } else if (D2TSP / D2Games >= 30.0) {
+        } else if (parseFloat((D2TSP / D2Games).toFixed(1)) >= 30.0) {
             eligibilityStatus = "Not eligible for D2.";
-        } else if (D1TSP / D1Games >= 11.5) {
+        } else if (parseFloat((D1TSP / D1Games).toFixed(1)) >= 11.5) {
             eligibilityStatus = "You are 1 point in D2.";
-        } else if (D2TSP / D2Games >= 16.5) {
+        } else if (parseFloat((D2TSP / D2Games).toFixed(1)) >= 16.5) {
             eligibilityStatus = "You are 1 point in D2.";
         } else {
             eligibilityStatus = "Eligible and not a point in D2.";
