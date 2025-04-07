@@ -71,7 +71,7 @@ document.getElementById("playerForm").addEventListener("submit", function (event
         } else if (D2TSP / D2Games >= 16.5) {
             eligibilityStatus = "You are 1 point in D2.";
         } else {
-            eligibilityStatus = "Eligible for D2.";
+            eligibilityStatus = "Eligible and not point in D2.";
         }
     }
 
@@ -88,7 +88,7 @@ document.getElementById("playerForm").addEventListener("submit", function (event
         } else if (D2TSP / D1Games >= 8) {
             eligibilityStatus = "You are 1 point in D3.";
         } else {
-            eligibilityStatus = "Eligible for D3.";
+            eligibilityStatus = "Eligible and not point in D3.";
         }
     }
 
@@ -255,9 +255,4 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error('Error loading player data:', error);
             resultsDiv.innerHTML = "<p>Failed to load player data. Please try again later.</p>";
         });
-});
-
-document.querySelector("button[type='submit']").addEventListener("click", function(e) {
-  e.preventDefault(); // Prevent form submission
-  document.getElementById("result").style.display = "inline-block"; // Show the result box
 });
