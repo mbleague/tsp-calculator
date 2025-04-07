@@ -39,19 +39,19 @@ document.getElementById("playerForm").addEventListener("submit", function (event
     if (D1Games > 0) {
         totalGames += D1Games;
         totalTSP += D1TSP;
-        resultText += `D1: ${(D1TSP / D1Games).toFixed(2)} TSP\n`;
+        resultText += `D1: ${(D1TSP / D1Games).toFixed(1)} TSP\n`;
     }
 
     if (D2Games > 0) {
         totalGames += D2Games;
         totalTSP += D2TSP;
-        resultText += `D2: ${(D2TSP / D2Games).toFixed(2)} TSP\n`;
+        resultText += `D2: ${(D2TSP / D2Games).toFixed(1)} TSP\n`;
     }
 
     if (D3Games > 0) {
         totalGames += D3Games;
         totalTSP += D3TSP;
-        resultText += `D3: ${(D3TSP / D3Games).toFixed(2)} TSP\n`;
+        resultText += `D3: ${(D3TSP / D3Games).toFixed(1)} TSP\n`;
     }
 
     // Check for eligibility based on the division they want to play
@@ -77,15 +77,15 @@ document.getElementById("playerForm").addEventListener("submit", function (event
 
     if (divisionPlanned === "D3") {
         // D3 Eligibility Check
-        if (D2TSP / D2Games >= 12) {
+        if (parseFloat((D2TSP / D2Games).toFixed(1)) >= 12) {
             eligibilityStatus = "Not eligible for D3.";
-        } else if (D3TSP / D3Games >= 20.0) {
+        } else if (parseFloat((D3TSP / D3Games).toFixed(1)) >= 20.0) {
             eligibilityStatus = "Not eligible for D3.";
-        } else if (D1TSP / D1Games > 4) {
+        } else if (parseFloat((D1TSP / D1Games).toFixed(1)) > 4) {
             eligibilityStatus = "Not eligible for D3. Past D1 players who averaged more than 4 TSP may be allowed on a case-by-case basis.";
-        } else if (D3TSP / D3Games >= 15.0) {
+        } else if (parseFloat((D3TSP / D3Games).toFixed(1)) >= 15.0) {
             eligibilityStatus = "You are 1 point in D3.";
-        } else if (D2TSP / D1Games >= 8) {
+        } else if (parseFloat((D2TSP / D2Games).toFixed(1)) >= 8) {
             eligibilityStatus = "You are 1 point in D3.";
         } else {
             eligibilityStatus = "Eligible and not a point in D3.";
