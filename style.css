@@ -8,17 +8,20 @@ label {
   font-size: 1.1em;
 }
 
-.checkbox-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; /* space between checkboxes */
-  margin-bottom: 1rem;
+/* Remove forced line breaks from checkboxes */
+input[type="checkbox"] {
+  margin-right: 0.5rem;
 }
 
-.checkbox-group label {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
+/* Optional: add spacing between checkboxes */
+.form-group input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/* Prevent new lines by removing <br> spacing in layout */
+.form-group br {
+  display: none;
 }
 
 input, select {
