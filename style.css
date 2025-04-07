@@ -8,20 +8,13 @@ label {
   font-size: 1.1em;
 }
 
-/* Remove forced line breaks from checkboxes */
-input[type="checkbox"] {
-  margin-right: 0.5rem;
-}
-
-/* Optional: add spacing between checkboxes */
-.form-group input[type="checkbox"] {
+#result {
+  margin-left: 20px; /* Add some space between button and result */
   display: inline-block;
-  margin-right: 1rem;
-}
-
-/* Prevent new lines by removing <br> spacing in layout */
-.form-group br {
-  display: none;
+  padding: 10px;
+  background-color: #f0f0f0; /* Optional background */
+  border-radius: 5px; /* Optional rounded corners */
+  border: 1px solid #ccc; /* Optional border */
 }
 
 input, select {
