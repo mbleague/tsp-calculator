@@ -11,13 +11,13 @@ label {
 button {
   font-size: 1.2em;
   padding: 10px;
-  display: inline-block; /* Ensures the button stays inline with the result */
+/*   display: inline-block; /* Ensures the button stays inline with the result */
 }
 
 #result {
   display: none; /* Hide the result box initially */
-  margin-left: 10px; /* Adds space between the button and the result */
-  display: inline-block; /* Ensures the result appears next to the button */
+/*   margin-left: 10px; /* Adds space between the button and the result */
+/*   display: inline-block; /* Ensures the result appears next to the button */
   padding: 10px;
   background-color: #f0f0f0;
   border-radius: 5px;
